@@ -58,4 +58,10 @@ public class User {
     public int hashCode() {
         return Objects.hash(login, password, age);
     }
+    public User(String login, String password,  Integer age) {
+        this.login = login;
+        this.password = password;
+        this.age = age;
+    }
+
 }
