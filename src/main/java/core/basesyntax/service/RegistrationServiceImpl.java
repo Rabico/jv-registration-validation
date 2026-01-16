@@ -44,12 +44,6 @@ public class RegistrationServiceImpl implements RegistrationService {
     }
 
     public User getUser(String login) {
-
-        for (User existingUser : Storage.people) {
-            if (existingUser.getLogin().equals(login)) {
-                return existingUser;
-            }
-        }
-        return null;
+        return storageDao.get(login);
     }
 }
